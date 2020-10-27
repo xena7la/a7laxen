@@ -259,7 +259,7 @@ a=setTimeout(function(){c.submit()},this.options.timeout),c.data("submit-click-t
 		<div class="block-container">
 			<div class="block-body">
 				<dl class="formRow formRow--input">
-					<dt></dt>
+					<dt>
 					<div class="formRow-labelWrapper">
 						<label class="formRow-label" for="_xfUid-1-1603824939">اسمك 
 						أو عنوان بريدك الإلكتروني</label></div>
@@ -269,7 +269,7 @@ a=setTimeout(function(){c.submit()},this.options.timeout),c.data("submit-click-t
 					</dd>
 				</dl>
 				<dl class="formRow formRow--input">
-					<dt></dt>
+					<dt>
 					<div class="formRow-labelWrapper">
 						<label class="formRow-label" for="_xfUid-2-1603824939">كلمة 
 						المرور</label></div>
@@ -288,7 +288,7 @@ a=setTimeout(function(){c.submit()},this.options.timeout),c.data("submit-click-t
 					مرورك؟</a> </dd>
 				</dl>
 				<dl class="formRow">
-					<dt></dt>
+					<dt>
 					<div class="formRow-labelWrapper">
 					</div>
 					</dt>
@@ -300,7 +300,6 @@ a=setTimeout(function(){c.submit()},this.options.timeout),c.data("submit-click-t
 					</ul>
 					</dd>
 				</dl>
-				<input name="_xfRedirect" type="hidden" value="https://xenarabia.com/">
 			</div>
 			<dl class="formRow formSubmitRow">
 				<dt></dt>
@@ -329,7 +328,7 @@ a=setTimeout(function(){c.submit()},this.options.timeout),c.data("submit-click-t
 		<div class="block-container">
 			<div class="block-body">
 				<dl class="formRow formRow--button">
-					<dt></dt>
+					<dt>
 					<div class="formRow-labelWrapper">
 						<label class="formRow-label">تسجيل الدخول باستخدام</label></div>
 					</dt>
@@ -364,9 +363,7 @@ a=setTimeout(function(){c.submit()},this.options.timeout),c.data("submit-click-t
 			</div>
 		</div>
 	</div>
-</div>
-
-"));
+</div>"));
 return}if(!l.FormData)return}if(!(this.$submitButton&&this.$submitButton.data("prevent-ajax")||XF.debug.disableAjaxSubmit))if(this.submitPending)a&&a.preventDefault();else{var f={skipDefault:!0};e&&(f.timeout=0);var h=c.Event("ajax-submit:before"),m={form:d,handler:this,method:d.attr("method")||"get",action:d.attr("action"),submitButton:b,preventSubmit:!1,successCallback:XF.proxy(this,"submitResponse"),ajaxOptions:f};d.trigger(h,m);if(m.preventSubmit)return!1;if(h.isDefaultPrevented())return!0;a&&
 a.preventDefault();var k=this;setTimeout(function(){k.submitPending=!0;var a=XF.getDefaultFormData(d,b,k.options.jsonName,k.options.jsonOptIn);k.disableButtons();XF.ajax(m.method,m.action,a,m.successCallback,m.ajaxOptions).always(function(){k.$submitButton=null;setTimeout(function(){k.submitPending=!1;k.enableButtons()},300);h=c.Event("ajax-submit:always");d.trigger(h,d,k)})},0)}},disableButtons:function(){this.$target.find(this.options.disableSubmit).prop("disabled",!0)},enableButtons:function(){this.$target.find(this.options.disableSubmit).prop("disabled",
 !1)},submitResponse:function(a,b,d){if("object"!=typeof a)XF.alert("Response was not JSON.");else{b=this.$target;d=this.$submitButton;var e=c.Event("ajax-submit:response");b.trigger(e,a,this);if(!e.isDefaultPrevented()){e=c.Event("ajax-submit:error");var f=!1,h=!1,m=a.redirect&&this.options.redirect,k=b.closest(".overlay");k.length&&this.options.hideOverlay||(k=null);m&&this.options.skipOverlayRedirect&&k&&(m=!1);d&&d.attr("data-ajax-redirect")&&(m=d.data("ajax-redirect"));if(a.errorHtml)b.trigger(e,
