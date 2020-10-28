@@ -249,7 +249,193 @@ a,l)&&l()}})}else console.error("Was not provided an object or HTML content")},a
 </div></div>");b||(b="error");if(!c)switch(b){case "error":c=XF.phrase("oops_we_ran_into_some_problems");break;default:c=""}return XF.overlayMessage(c,e)},getOverlayHtml:function(a){var b={dismissible:!0,title:null};d.isPlainObject(a)&&(b=d.extend({},b,a),a.html&&(a=a.html));
 if("string"==typeof a)a=d(d.parseHTML(a));else if(!(a instanceof d))throw Error("Can only create an overlay with html provided as a string or jQuery object");if(!a.is(".overlay")){var c=b.title;if(!c){var f=a.find(".overlay-title");f.length&&(c=f.contents(),f.remove())}c||(c=XF.htmlspecialchars(d("title").text()));f=a.find(".overlay-content");f.length&&(a=f);f=d('<div class="overlay" tabindex="-1"><div class="overlay-title"></div><div class="overlay-content"></div></div>');var e=f.find(".overlay-title");
 e.html(c);b.dismissible&&e.prepend('<a class="overlay-titleCloser js-overlayClose" role="button" tabindex="0" aria-label="'+XF.phrase("close")+'"></a>');f.find(".overlay-content").html(a);a=f}a.appendTo("body");return a},createMultiBar:function(a,b,c,d){},getMultiBarHtml:function(a){var b={dismissible:!0,title:null};d.isPlainObject(a)&&(d.extend({},b,a),a.html&&(a=a.html));if("string"==typeof a)a=d(d.parseHTML(a));else if(!(a instanceof d))throw Error("Can only create an action bar with html provided as a string or jQuery object");
-b=d('<div class="multiBar" tabindex="-1"><div class="multiBar-inner"><span>Hello there.</span></div></div>');b.find(".multiBar-inner").html(a);b.appendTo("body");return b},overlayMessage:function(a,b){if("string"==typeof b)b=d(d.parseHTML(b));else if(!(b instanceof d))throw Error("Can only create an overlay with html provided as a string or jQuery object");b.is(".block, .blockMessage")||b.find(".block, .blockMessage").length||(b=d('<div class="blockMessage" />').html(b));b=XF.getOverlayHtml({title:a,
+b=d('<div class="multiBar" tabindex="-1"><div class="multiBar-inner"><span>Hello there.</span></div></div>');b.find(".multiBar-inner").html(a);b.appendTo("body");return b},overlayMessage:function(a,b){if("string"==typeof b)b=d(d.parseHTML(b));else if(!(b instanceof d))throw Error("Can only create an overlay with html provided as a string or jQuery object");b.is(".block, .blockMessage")||b.find(".block, .blockMessage").length||(b=d('<div class="overlay-content"><div class="blocks">
+	
+			<form action="/login/login" method="post" class="block">
+				
+		<div class="block-container">
+			<div class="block-body">
+				
+			<dl class="formRow formRow--input">
+				<dt>
+					<div class="formRow-labelWrapper">
+					<label class="formRow-label" for="_xfUid-1-1603852613">اسمك أو عنوان بريدك الإلكتروني</label></div>
+				</dt>
+				<dd>
+					<input type="text" class="input" name="login" autofocus="autofocus" autocomplete="username" id="_xfUid-1-1603852613">
+				</dd>
+			</dl>
+		
+
+				
+			<dl class="formRow formRow--input">
+				<dt>
+					<div class="formRow-labelWrapper">
+					<label class="formRow-label" for="_xfUid-2-1603852613">كلمة المرور</label></div>
+				</dt>
+				<dd>
+					
+
+
+
+<div data-xf-init=" password-hide-show" data-show-text="عرض" data-hide-text="إخفاء">
+	
+		<div class="inputGroup inputGroup--joined">
+			
+	<input type="password" name="password" value="" class="input js-password input--passwordHideShow" autocomplete="current-password" id="_xfUid-2-1603852613">
+
+			
+			<div class="inputGroup-text">
+				<label class="iconic iconic--hideShow js-hideShowContainer"><input type="checkbox" value="1"><i aria-hidden="true"></i><span class="iconic-label">عرض</span></label>
+
+			</div>
+		</div>
+	
+
+	
+</div>
+					<a href="/lost-password/" data-xf-click="overlay">نسيت كلمة مرورك؟</a>
+				</dd>
+			</dl>
+		
+
+				
+
+				
+			<dl class="formRow">
+				<dt>
+					<div class="formRow-labelWrapper"></div>
+				</dt>
+				<dd>
+					
+			<ul class="inputChoices">
+				<li class="inputChoices-choice"><label class="iconic"><input type="checkbox" name="remember" value="1" checked="checked"><i aria-hidden="true"></i><span class="iconic-label">البقاء متصلاً</span></label></li>
+
+			</ul>
+		
+				</dd>
+			</dl>
+		
+
+				<input type="hidden" name="_xfRedirect" value="https://xenarabia.com/">
+			</div>
+			
+			<dl class="formRow formSubmitRow">
+				<dt></dt>
+				<dd>
+					<div class="formSubmitRow-main">
+						<div class="formSubmitRow-bar"></div>
+						<div class="formSubmitRow-controls"><button type="submit" class="button--primary button button--icon button--icon--login"><span class="button-text">تسجيل الدخول</span></button></div>
+					</div>
+				</dd>
+			</dl>
+		
+		</div>
+		
+			<div class="block-outer block-outer--after">
+				<div class="block-outer-middle">
+					ليس لديك حساب؟ <a href="/register/" class="button"><span class="button-text">سجل الآن</span></a>
+				</div>
+			</div>
+		
+	
+				<input type="hidden" name="_xfToken" value="1603852613,7006bbc298ccf9d9300450f19e6ed9ba">
+				
+			</form>
+		
+
+	
+		<div class="blocks-textJoiner"><span></span><em>أو</em><span></span></div>
+
+		<div class="block">
+			<div class="block-container">
+				<div class="block-body">
+					
+			<dl class="formRow formRow--button">
+				<dt>
+					<div class="formRow-labelWrapper">
+					<label class="formRow-label">تسجيل الدخول باستخدام</label></div>
+				</dt>
+				<dd>
+					
+
+						<ul class="listHeap">
+							
+								<li>
+									
+	<a href="/register/connected-accounts/facebook/?setup=1" class="button--provider button--provider--facebook button"><span class="button-text">
+		
+		Facebook
+	</span></a>
+
+								</li>
+							
+								<li>
+									
+	<a href="/register/connected-accounts/twitter/?setup=1" class="button--provider button--provider--twitter button"><span class="button-text">
+		
+		Twitter
+	</span></a>
+
+								</li>
+							
+								<li>
+									
+	<a href="/register/connected-accounts/google/?setup=1" class="button--provider button--provider--google button"><span class="button-text">
+		
+			<img class="button-icon" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAmCAYAAABDClKtAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+nhxg7wAAA11JREFUWIXNmL9vUlEYhp/a3sYiUWIiDk1burkYqYHFRSqNkwOVhcREWxMXl9rJgUFNWnWr/QuKGw4EBrsVpJMmNBHjoulQbGJq0DQ0XrVIbR3ugcDt/XGgV+KbEOCec977cPjOd79z4D9UT6cDy+GgHwgBHuCyrrkIfALy3myh+E+hyuGgD5gBIoBPclgFSACL3myh5BhUORz0AAvAlCSImRLArDdbqBwJqhwORoAltL/JCVWAaW+2kDHrcMwGaAlIOwiE8EqXw8GHbUMJoCkHYfQaMWswhCqHg07Ej5US3mxh2qzxUEyJGEq3cYMSWgp4J76PoKUKXydAh6DEKttALoYSaMvcMA+J9PGA1hm3BTKCkomjCjDpzRbydubCM4Q28xkZoBao2oriqxbObPxcGbTqXwTG7fKMAZhPNnHqoRaAe3ubbtTUKAe7vfq+FWCsHfNO1bz6IgB9wyonb3+k9+wvfd/pbgCBmKnaiuIH3uobf7wc5vf706A9WMe7AQTQJ95DRo0nrm2ijKjsvvE+lzG7Mq8a+rShSi7uLtahTFNA//lt+s9vZ3ghZfrqiFBFYKweU/p6qKWjMlFra7UdQX6weSALdQuoIRmorksGysmyRUp1qFWLPv7aitJVsPrqM40b9UDhiXohAq8TEn55iT5+zGc/3wxlaLa+d4r734Ns/XHdQqsKLJWLu20T7JV51aoKqYD4+5SJWhGtLmpouTrE3Z1LbP1xAYQCyWjE7oYSQHa7oNUGlFCjkJ9Tx5j7PoZ6oDQPWAoko1aGdkD1HZGVMnqoxa19Fzcrl1neHTIa4AHSgWS006BfwHqWirm4u9QCpUzUSte3JxLre6esjP3ARiAZDcmSBJJRz/jTz2nsi8fF+oeWylPMQlvl8FosZVgOC697wExvddhz/OsdeqvDZl6lXNw9agglzJzYOPjFq6GefRcD5Tv0/bho5DGei7vzplACbAHtVzqu/p2rHP92o/nSs1zcPdt8wXTbHkhG/9lmtO/XOQa+zNCz78rk4u5Jfbvps28tlppGImF2or2BD/wcfJwBDHc3tgccIsacPOAAeLQWSz00a5Q6ChIryYmtfB6YNVuxbUHVJTJ6J4dmGeD5WiyVlxnQ8fFiIBm1O17cAfKyIP+9/gIvkBKjE2YsSQAAAABJRU5ErkJggg==">
+		
+		Google
+	</span></a>
+
+								</li>
+							
+								<li>
+									
+	<a href="/register/connected-accounts/github/?setup=1" class="button--provider button--provider--github button"><span class="button-text">
+		
+		GitHub
+	</span></a>
+
+								</li>
+							
+								<li>
+									
+	<a href="/register/connected-accounts/linkedin/?setup=1" class="button--provider button--provider--linkedin button"><span class="button-text">
+		
+		Linkedin
+	</span></a>
+
+								</li>
+							
+								<li>
+									
+	<a href="/register/connected-accounts/microsoft/?setup=1" class="button--provider button--provider--microsoft button"><span class="button-text">
+		
+		Microsoft
+	</span></a>
+
+								</li>
+							
+								<li>
+									
+	<a href="/register/connected-accounts/yahoo/?setup=1" class="button--provider button--provider--yahoo button"><span class="button-text">
+		
+		Yahoo
+	</span></a>
+
+								</li>
+							
+						</ul>
+					
+				</dd>
+			</dl>
+		
+				</div>
+			</div>
+		</div>
+	
+</div></div>').html(b));b=XF.getOverlayHtml({title:a,
 html:b});return XF.showOverlay(b,{role:"alertdialog"})},flashMessage:function(a,b,c){var f=d('<div class="flashMessage"><div class="flashMessage-content"></div></div>');f.find(".flashMessage-content").html(a);f.appendTo("body").addClassTransitioned("is-active");setTimeout(function(){f.removeClassTransitioned("is-active",function(){f.remove();c&&c()})},Math.max(500,b))},htmlspecialchars:function(a){return String(a).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;")},
 regexQuote:function(a){return(a+"").replace(/([\\\.\+\*\?\[\^\]\$\(\)\{\}=!<>\|:])/g,"\\$1")},stringTranslate:function(a,b){a=a.toString();for(var c in b)if(b.hasOwnProperty(c)){var d=new RegExp(XF.regexQuote(c,"g"));a=a.replace(d,b[c])}return a},stringHashCode:function(a){var b=0,c;if(0===a.length)return b;var d=0;for(c=a.length;d<c;d++){var e=a.charCodeAt(d);b=(b<<5)-b+e;b|=0}return b},getUniqueCounter:function(){var a=XF.counter;XF.counter++;return a},canonicalizeUrl:function(a){if(a.match(/^[a-z]+:/i))return a;
 if(0==a.indexOf("/")){var b;return(b=XF.config.url.fullBase.match(/^([a-z]+:(\/\/)?[^\/]+)\//i))?b[1]+a:a}return XF.config.url.fullBase+a},isRedirecting:!1,redirect:function(a){XF.isRedirecting=!0;if(XF.JobRunner.isBlockingJobRunning())return d(k).one("job:blocking-complete",function(){XF.redirect(a)}),!1;a=XF.canonicalizeUrl(a);var b=h.location;if(a==b.href)b.reload(!0);else{h.location=a;var c=a.split("#"),f=b.href.split("#");c[1]&&c[0]==f[0]&&b.reload(!0)}return!0},getAutoCompleteUrl:function(){return"admin"==
